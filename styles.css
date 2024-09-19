@@ -1,23 +1,26 @@
-body {
+@font-face {
+    font-family: 'Goozette';
+    src: url('/path/to/fonts/Goozette.otf') format('opentype');
+}
 
+body {
   background-image: url('sky.jpg');
   background-repeat: repeat;
-    background-size: auto; /* Adjust the size of each tile */
-  background-color: #f7f3e9; /* Light beige, gives it a paper feel */
-    color: #2f3e46; /* Muted dark color for text */
+  background-size: auto;
 
-    font-family: 'Special Elite', monospace;
+  font-family: 'Special Elite', monospace;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-
 }
 h1 {
   color: deeppink;
+  font-family: 'Goozette', sans-serif;
 }
 blockquote {
   color: gray;
 }
 b {
   color: hotpink;
+  font-family: 'Goozette', sans-serif;
 }
 p {
   color: gray;
@@ -27,22 +30,11 @@ a {
 }
 a:hover {
     color: #ff5722;
-    text-decoration: underline wavy; /* Mimic handwritten underlines */
-}
-/* Basic CSS to style the text container with borders */
-.text-box {
-    width: 80%; /* Set the width of the box */
-    margin: 20px auto; /* Center the box and add margin around it */
-    padding: 20px; /* Add padding inside the box */
-    border: 5px ; /* Solid border around the box */
-    border-color: deeppink;
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
+    text-decoration: underline wavy;
 }
 
-/* Optional: Style the text inside the box */
-/* Container with fixed width and borders */
+
+/* container with fixed width and borders */
 .text-box {
     width: 600px; /* Fixed width, it won't expand */
     margin: 20px auto; /* Center the box horizontally */
@@ -52,9 +44,10 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border-radius: 8px; /* Rounded corners */
     overflow: auto; /* Ensure content stays inside the box */
+    posoition: relative;
 }
 
-/* Optional: Style the text inside the box */
+/* style the text inside the box */
 .text-box h1 {
     text-align: center; /* Center the heading */
     font-size: 2em; /* Larger heading size */
@@ -64,10 +57,12 @@ a:hover {
     line-height: 1.6; /* Increase line height for better readability */
     font-size: 1.1em; /* Slightly larger paragraph text */
 }
+
+/* animation */
 .fly-around {
     position: absolute; /* Allows the image to move freely on the page */
     width: 100px; /* Adjust the size of the image */
-    animation: fly 1s infinite, spin 5s infinite; /* 10s duration, repeating infinitely */
+    animation: fly 40s infinite, spin 5s infinite; /* 10s duration, repeating infinitely */
 }
 
 @keyframes fly {
@@ -75,15 +70,48 @@ a:hover {
         top: 0;
         left: 0;
     }
+    10% {
+        top: 50%;
+        left: 100%;
+    }
+    20% {
+        top: 100%;
+        left: 0;
+    }
+    30% {
+        top: 150%;
+        left: 100%;
+    }
+    40% {
+        top: 200%;
+        left: 0;
+    }
     50% {
-        top: 0;
-        left: 95%;
+        top: 250%;
+        left: 100%;
+    }
+    60% {
+        top: 300%;
+        left: 0;
+    }
+    70% {
+        top: 350%;
+        left: 100%;
+    }
+    80% {
+        top: 400%;
+        left: 0;
+    }
+    90% {
+        top: 200%;
+        left: 100%;
     }
     100% {
-        top: 0;
+        top: 0%;
         left: 0;
     }
 }
+
 @keyframes spin {
     0% {
         transform: rotate(0deg); /* Start with no rotation */
@@ -91,4 +119,15 @@ a:hover {
     100% {
         transform: rotate(360deg); /* Complete a full rotation */
     }
+}
+
+
+  .side-gif {
+    width: 200px;
+    position: absolute;
+    top: 410px;
+    right: 60px;
+  }
+
+
 }
