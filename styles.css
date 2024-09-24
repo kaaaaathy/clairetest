@@ -7,13 +7,15 @@ body {
   background-image: url('sky.jpg');
   background-repeat: repeat;
   background-size: auto;
-
   font-family: 'Special Elite', monospace;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
   color: deeppink;
   font-family: 'Goozette', sans-serif;
+  text-align: center;
+  font-size: 2em;
 }
 blockquote {
   color: gray;
@@ -33,36 +35,28 @@ a:hover {
     text-decoration: underline wavy;
 }
 
-
-/* container with fixed width and borders */
 .text-box {
-    width: 600px; /* Fixed width, it won't expand */
-    margin: 20px auto; /* Center the box horizontally */
-    padding: 20px; /* Add space inside the box */
-    border: 5px solid deeppink; /* Solid border around the text */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    overflow: auto; /* Ensure content stays inside the box */
-    posoition: relative;
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid deeppink;
+    background-color: white;
+    border-radius: 8px;
+    overflow: auto;
 }
 
-/* style the text inside the box */
-.text-box h1 {
-    text-align: center; /* Center the heading */
-    font-size: 2em; /* Larger heading size */
+.inner-box {
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 3px solid deeppink;
+    border-radius: 5px;
 }
 
-.text-box p {
-    line-height: 1.6; /* Increase line height for better readability */
-    font-size: 1.1em; /* Slightly larger paragraph text */
-}
-
-/* animation */
 .fly-around {
-    position: absolute; /* Allows the image to move freely on the page */
-    width: 100px; /* Adjust the size of the image */
-    animation: fly 40s infinite, spin 5s infinite; /* 10s duration, repeating infinitely */
+    position: absolute;
+    width: 100px;
+    animation: fly 40s infinite, spin 5s infinite;
 }
 
 @keyframes fly {
@@ -114,20 +108,37 @@ a:hover {
 
 @keyframes spin {
     0% {
-        transform: rotate(0deg); /* Start with no rotation */
+        transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg); /* Complete a full rotation */
+        transform: rotate(360deg);
     }
 }
 
+.nav-button {
+    display: inline-block;
+    background-color: deeppink;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+}
 
-  .side-gif {
-    width: 200px;
-    position: absolute;
-    top: 410px;
-    right: 60px;
-  }
+.nav-button:hover {
+    background-color: #ff5722;
+}
 
+.nav-button.next {
+    float: right;
+    margin-right: 0;
+}
 
 }
