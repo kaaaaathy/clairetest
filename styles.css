@@ -51,6 +51,30 @@ a:hover {
     border: 3px solid deeppink;
     border-radius: 5px;
 }
+.nav-button {
+    display: inline-block;
+    background-color: deeppink;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+}
+
+.nav-button:hover {
+    background-color: #ff5722;
+}
+
+.nav-button.next {
+    float: right;
+    margin-right: 0;
+}
 
 .fly-around {
     position: absolute;
@@ -112,31 +136,4 @@ a:hover {
     100% {
         transform: rotate(360deg);
     }
-}
-
-.nav-button {
-    display: inline-block;
-    background-color: deeppink;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 50%;
-    width: 100px;
-    height: 60px;
-    line-height: 60px;
-    transition: background-color 0.3s ease;
-    vertical-align: middle;
-}
-
-.nav-button:hover {
-    background-color: #ff5722;
-}
-
-.nav-button.next {
-    float: right;
-    margin-right: 0;
-}
-
 }
